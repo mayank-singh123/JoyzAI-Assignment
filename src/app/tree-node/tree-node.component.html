@@ -1,0 +1,10 @@
+<li>
+  {{ node }}
+  <ul *ngIf="getChildren(node).length > 0">
+    <app-tree-node
+      *ngFor="let child of getChildren(node)"
+      [node]="child"
+      [tree]="tree">
+    </app-tree-node>
+  </ul>
+</li>
